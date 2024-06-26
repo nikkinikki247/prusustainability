@@ -2,7 +2,10 @@ import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
-import Post from "@/components/Post.js";
+import PostList from "@/components/PostList.js";
+import PostForm from "@/components/PostForm.js";
+
+
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -16,7 +19,10 @@ export default function Home() {
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
       <h1> Volunteer With Pru</h1>
-      <Post />
+
+      <PostList />
+      <PostForm />
+
       </main>
     </>
   );
