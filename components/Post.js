@@ -2,7 +2,6 @@
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import { useParams } from 'react-router-dom';
-
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Post(props) {

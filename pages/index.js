@@ -21,7 +21,10 @@ export default function Home() {
       <h1> Volunteer With Pru</h1>
 
       <PostList />
-      <PostForm />
+      <div className="form-area">
+            <PostForm />
+      </div>
+      
 
       </main>
     </>
