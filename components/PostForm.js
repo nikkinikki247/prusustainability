@@ -37,19 +37,46 @@ export default function PostForm() {
     <>
     <div>
       <h2>Create Event </h2>
-      <form onSubmit={handleAddPost}>
-        <label>Name:</label>
-        <input type="text" value={employee_name} onChange={(e) => setName(e.target.value)} />
-        <label>Employee ID:</label>
-        <input type="text" value={employee_id} onChange={(e) => setEID(e.target.value)} />
-        <label>Date of Event:</label>
-        <input type="text" value={date_of_event} onChange={(e) => setDate(e.target.value)} />
+      <form className="row g-3 needs-validation" novalidate onSubmit={handleAddPost}>
+        <div className="col-md-4">
+        <label className="form-label">Name:</label>
+        <input type="text" value={employee_name} onChange={(e) => setName(e.target.value)} required />
+        <div class="valid-feedback">
+            Looks good!
+          </div>
+      </div>
+      <div className="col-md-4">
+        <label  className="form-label">Employee ID:</label>
+        <input type="text" value={employee_id} onChange={(e) => setEID(e.target.value)} required/>
+        <div class="valid-feedback">
+              Looks good!
+          </div>
+       </div>
+       <div className="col-md-4">
+        <label  className="form-label">Date of Event:</label>
+        <input type="text" value={date_of_event} onChange={(e) => setDate(e.target.value)} required/>
+        <div className="valid-feedback">
+              Looks good!
+          </div>
+       </div>
+       <div className="col-md-4">
         <label>Event Name:</label>
-        <input type="text" value={event_name} onChange={(e) => setEName(e.target.value)} />
+        <input type="text" value={event_name} onChange={(e) => setEName(e.target.value)} required/>
+        <div className="valid-feedback">
+              Looks good!
+          </div>
+       </div>
+       <div className="col-md-4">
         <label>Description:</label>
-        <input type="text" value={description} onChange={(e) => setDescription(e.target.value)} />
-
-        <button type="submit">Add Event</button>
+        <input type="text" value={description} onChange={(e) => setDescription(e.target.value)} required/>
+        <div className="valid-feedback">
+              Looks good!
+          </div>
+       </div>
+       <div className="col-12">
+        <button class="btn btn-primary" type="submit">Add Event</button>
+       </div>
+       
       </form>
     </div>
     </>
