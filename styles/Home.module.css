@@ -235,8 +235,12 @@
   --bs-body-color: var(--bs-white);
   --bs-body-color-rgb: #{to-rgb($white)};
   --bs-body-bg: var(--bs-blue);
-  --bs-body-bg-rgb: #{to-rgb($blue)};
-  --bs-tertiary-bg: #{$blue-600};
+  --bs-body-bg-rgb: {#06c};
+  --bs-tertiary-bg: {#06c};
 
 
+}
+
+#interested{
+    color: aqua;
 }

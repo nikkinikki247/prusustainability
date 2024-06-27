@@ -13,13 +13,14 @@ export default function PostForm() {
     const [description, setDescription] = useState('');
     const [event_name, setEName] = useState('');
     const [employee_id, setEID] = useState('');
+    const [rsvp_link, setRL] = useState('')
 
     const handleAddPost = async (e) => {   
         e.preventDefault();
 
         try {
             const { data, error } = await supabase.from('posts').insert([
-              { employee_name, date_of_event, description, employee_id, event_name }
+              { employee_name, date_of_event, description, employee_id, event_name, rsvp_link }
             ]);
 
             console.log(data, "data added")
@@ -28,6 +29,7 @@ export default function PostForm() {
             setDescription('');
             setEName('');
             setEID('');
+            setRL('')
             if (error) {
               throw error;
             }
@@ -41,7 +43,7 @@ export default function PostForm() {
     return (
         <div className="container mt-5">
             <div className="row justify-content-center">
-                <div className="col-md-10 col-lg-8">
+                <div className="col-md-16 col-lg-14">
                     <div className="card shadow-lg">
                         <div className="card-header bg-primary text-white">
                             <h2 className="mb-0">Create Event</h2>
@@ -77,6 +79,13 @@ export default function PostForm() {
                                     <textarea className="form-control" rows="3" value={description} onChange={(e) => setDescription(e.target.value)} required></textarea>
                                     <div className="valid-feedback">Looks good!</div>
                                 </div>
+                                <div className="row mb-3">
+                                    <div className="col-md-12">
+                                        <label className="form-label">RSVP Link:</label>
+                                        <input type="text" className="form-control" value={rsvp_link} onChange={(e) => setRL(e.target.value)} required/>
+                                        <div className="valid-feedback">Looks good!</div>
+                                    </div>
+                                </div>
                                 <button className="btn btn-primary w-100" type="submit">Add Event</button>
                             </form>
                         </div>
@@ -86,3 +95,5 @@ export default function PostForm() {
         </div>
     );
 }
+
+
