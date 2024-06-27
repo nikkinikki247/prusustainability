@@ -10,7 +10,7 @@ export default function Post(props) {
    
       <main className={`${styles.main} ${inter.className}`}>
       <div className="card" style={{width: "30rem"}}>
-  <img src="https://lh3.googleusercontent.com/proxy/zDJ5byXQNuaENPLVefEDfKAnFD8ROFjxWp_F7I1o0AZdt9p5gW5k4JOezi_dH_AsfjqhtI3OzySfDs5Onw7Gollf97CdNw0bO3hnUZZP9OTBEZi7nBA" class="card-img-top" alt="..."/>
+  <img src="https://djcs-prod.s3.amazonaws.com/public/blogs/deloitte/blogs.dir/4/files/2021/12/Prudential-1000x666_5.png" class="card-img-top" alt="..."/>
   <div className="card-body">
     <h5 className="card-title">{props.event_name}</h5>
     <p className="card-text">{props.description}</p>
